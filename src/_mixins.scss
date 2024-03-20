@@ -1,0 +1,6 @@
+@mixin d-flex($direction, $justify, $aligh){
+    display:flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $aligh;
+}

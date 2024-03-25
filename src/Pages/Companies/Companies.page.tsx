@@ -1,22 +1,29 @@
+import { useEffect, useState } from "react";
 import "./companies.scss";
 import httpModule from "../../helpers/http.module";
-import { useEffect, useState } from "react";
 import { ICompany } from "../../Types/global.typing";
 
-
 const Companies = () => {
-    const [companies, setCopmanies] = useState<ICompany[]>([]);
+    const [companies, setCompanies] = useState<ICompany[]>([]);
     const [loading, setLoading] = useState<boolean>(false);
 
-useEffect(()=>{
+  useEffect(() => {
     setLoading(true);
-    httpModule.get<ICompany[]>("/Company/Get")
-    .then(response => )
-    .catch()
-})
-  return (
-    <div>Companies.page</div>
-  )
-}
+    httpModule
+       .get<ICompany[]>("/Company/Get")
+       .then((response) => {
+          setCompanies(response.data);
+          setLoading(false);
+       })
+       .catch((error) => {
+          alert("Error");
+          console.log(error);
+          setLoading(false);
+       });
+ }, []);
 
-export default Companies
+  console.log(companies);
+  return <div>Companies.page</div>;
+};
+
+export default Companies;

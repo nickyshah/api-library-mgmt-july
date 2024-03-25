@@ -10,7 +10,7 @@ const Companies = () => {
   useEffect(() => {
     setLoading(true);
     httpModule
-       .get<ICompany[]>("/Company/Get")
+       .get<ICompany[]>("/Company")
        .then((response) => {
           setCompanies(response.data);
           setLoading(false);

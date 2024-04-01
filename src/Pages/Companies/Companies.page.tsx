@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 import "./companies.scss";
 import httpModule from "../../helpers/http.module";
 import { ICompany } from "../../Types/global.typing";
-import { Button } from "@mui/material";
+import { Button, CircularProgress } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { Add } from "@mui/icons-material";
+import CompaniesGrid from "../../Components/companies/CompaniesGrid.componenet";
 
 const Companies = () => {
   const [companies, setCompanies] = useState<ICompany[]>([]);
@@ -35,7 +36,13 @@ const Companies = () => {
           <Add />
         </Button>
       </div>
-      
+      {loading ? (
+        <CircularProgress size={100} />
+      ) : companies.length === 0 ? (
+        <h1>No Company</h1>
+      ) : (
+        <CompaniesGrid data={companies} />
+      )}
     </div>
   );
 };

@@ -1,7 +1,6 @@
 import { Box } from "@mui/material";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import moment from "moment";
-import React from "react";
 import { ICompany } from "../../Types/global.typing";
 
 const column: GridColDef[] = [

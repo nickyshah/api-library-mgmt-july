@@ -15,7 +15,7 @@ const Companies = () => {
   useEffect(() => {
     setLoading(true);
     httpModule
-      .get<ICompany[]>("/Company")
+      .get<ICompany[]>("/Company/get")
       .then((response) => {
         setCompanies(response.data);
         setLoading(false);
@@ -32,7 +32,7 @@ const Companies = () => {
     <div className="content companies">
       <div className="heading">
         <h2>Companies</h2>
-        <Button variant="outlined" onClick={() => redirect("companies/add")}>
+        <Button variant="outlined" onClick={() => redirect("add")}>
           <Add />
         </Button>
       </div>

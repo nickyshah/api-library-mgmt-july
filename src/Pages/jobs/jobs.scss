@@ -1,13 +1,13 @@
 @import "../../mixins";
 
-.companies{
+.jobs{
     .heading{
         @include d-flex(row, space-between, center);
         width:100%;
     }
 }
 
-.add-company{
+.add-job{
     width: 500px;
     max-width: 100%;
     @include d-flex(column, flex-start, center);

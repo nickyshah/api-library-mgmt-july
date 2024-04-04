@@ -1,15 +1,10 @@
 import React, { useState } from "react";
 import { ICreateCompany } from "../../Types/global.typing";
 import TextField from "@mui/material/TextField/TextField";
-import {
-  Button,
-  FormControl,
-  InputLabel,
-  MenuItem,
-  Select,
-} from "@mui/material";
+import { Button,  FormControl,  InputLabel,  MenuItem,  Select,} from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import httpModule from "../../helpers/http.module";
+import './companies.scss'
 
 const AddCompany = () => {
   const [company, SetCompany] = useState<ICreateCompany>({

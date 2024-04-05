@@ -39,14 +39,29 @@ const AddCandidate = () => {
   }, []);
 
   const handleClickSaveBtn = () => {
-    //   if (candidates.firstName === "" || candidates.lastName === "" || candidates.email === "" || candidates.phoneNumber === "" || candidates.coverLetter === "" || candidates.jobId === "") {
-    //     alert("Please fill all the fields");
-    //     return;
-    //   }
-    //   httpModule
-    //     .post("/Candidate/Create", candidates)
-    //     .then((response) => redirect("/Jobs"))
-    //     .catch((error) => console.log(error));
+      if (candidates.firstName === "" || 
+      candidates.lastName === "" || 
+      candidates.email === "" || 
+      candidates.phoneNumber === "" || 
+      candidates.coverLetter === "" || 
+      candidates.jobId === ""||
+      !pdfFile) 
+      {
+        alert("Please fill all the fields");
+        return;
+      }
+      const newCandidateFormData = new FormData();
+      newCandidateFormData.append("firstName", candidates.firstName);
+      newCandidateFormData.append("lastName", candidates.lastName);
+      newCandidateFormData.append("email", candidates.email);
+      newCandidateFormData.append("phoneNumber", candidates.phoneNumber);
+      newCandidateFormData.append("coverLetter", candidates.coverLetter);
+      newCandidateFormData.append("jobId", candidates.jobId);
+      newCandidateFormData.append("pdfFile", pdfFile);
+      httpModule
+        .post("/Candidate/Create", newCandidateFormData)
+        .then((response) => redirect("/candidates"))
+        .catch((error) => console.log(error));
   };
 
   const handleClickBackBtn = () => {

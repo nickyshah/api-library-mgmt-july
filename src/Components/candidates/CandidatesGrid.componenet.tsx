@@ -11,7 +11,7 @@ const column: GridColDef[] = [
   { field: "lastName", headerName: "Last Name", width: 120 },
   { field: "email", headerName: "Email", width: 150 },
   { field: "phoneNumber", headerName: "Phone Number", width: 150 },
-  { field: "coverLetter", headerName: "Cover Letter", width: 150 },
+  { field: "coverLetter", headerName: "Cover Letter", width: 500 },
   {
     field: "resumeUrl",
     headerName: "Download Resume",

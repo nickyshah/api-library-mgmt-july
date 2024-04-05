@@ -12,7 +12,7 @@ export interface ICreateCompany {
 
 export interface IJob {
   id: string;
-  titles: string;
+  title: string;
   level: string;
   companyId: string;
   companyName: string;

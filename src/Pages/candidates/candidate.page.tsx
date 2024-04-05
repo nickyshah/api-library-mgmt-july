@@ -5,7 +5,7 @@ import { ICandidate, ICompany, IJob } from "../../Types/global.typing";
 import { Button, CircularProgress } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { Add } from "@mui/icons-material";
-import CandidatesGrid from "../../Components/candidates/CandidatesGrid.componenet";
+import CandidatesGrid from "../../Components/candidates/CandidatesGrid.component";
 
 const Candidate = () => {
   const [candidates, setCandidates] = useState<ICandidate[]>([]);

@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
+import "./candidates-grid.scss";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
-import moment from "moment";
 import { ICandidate } from "../../Types/global.typing";
 import { baseUrl } from "../../constants/url.constants";
 import { PictureAsPdf } from "@mui/icons-material";
@@ -33,7 +33,7 @@ interface ICandidatesGridprops {
 
 const CandidatesGrid = ({ data }: ICandidatesGridprops) => {
   return (
-    <Box sx={{ width: "100%", height: 450 }} className="jobs.grid">
+    <Box sx={{ width: "100%", height: 450 }} className="candidates-grid">
       <DataGrid
         rows={data}
         columns={column}

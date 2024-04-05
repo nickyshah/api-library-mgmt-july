@@ -1,3 +1,4 @@
+import "./jobs-grid.scss";
 import { Box } from "@mui/material";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import moment from "moment";
@@ -22,7 +23,7 @@ interface IJobsGridprops {
 
 const JobsGrid = ({ data }: IJobsGridprops) => {
   return (
-    <Box sx={{ width: "100%", height: 450 }} className="jobs.grid">
+    <Box sx={{ width: "100%", height: 450 }} className="jobs-grid">
       <DataGrid
         rows={data}
         columns={column}

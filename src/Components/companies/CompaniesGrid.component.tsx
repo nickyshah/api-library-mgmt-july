@@ -1,3 +1,4 @@
+import "./companies-grid.scss";
 import { Box } from "@mui/material";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import moment from "moment";
@@ -21,7 +22,7 @@ interface ICompaniesGridprops {
 
 const CompaniesGrid = ({ data }: ICompaniesGridprops) => {
   return (
-    <Box sx={{ width: "100%", height: 450 }} className="companies.grid">
+    <Box sx={{ width: "100%", height: 450 }} className="companies-grid">
       <DataGrid
         rows={data}
         columns={column}

@@ -39,7 +39,7 @@ const Jobs = () => {
       {loading ? (
         <CircularProgress size={100} />
       ) : jobs.length === 0 ? (
-        <h1>No Company</h1>
+        <h1>No Jobs</h1>
       ) : (
         <JobsGrid data={jobs} />
       )}

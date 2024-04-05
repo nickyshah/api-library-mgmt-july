@@ -11,7 +11,7 @@ const Companies = () => {
   const [companies, setCompanies] = useState<ICompany[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const redirect = useNavigate();
-
+  
   useEffect(() => {
     setLoading(true);
     httpModule

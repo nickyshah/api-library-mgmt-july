@@ -20,7 +20,7 @@ export interface IJob {
 }
 
 export interface ICreateJob {
-    titles: string;
+    title: string;
     level: string;
     companyId: string;
 }
